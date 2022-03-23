@@ -12,7 +12,7 @@
   --bg-color-transparent: #13052580;
   --font-color: #ffffff;
   --btn-bg-color: #232855;
-  --accent-color: #87b911;
+  --accent-color: #a9c762;
   --header-shadow: var(--accent-color) 0px 0px 5px;
   --card-shadow: var(--accent-color) 0px 0px 20px;
 }
@@ -78,7 +78,7 @@ header .container {
 }
 
 .not-connected h1 {
-  text-shadow: 2px 2px 0 var(--accent-color);
+  text-shadow: 0px 0px 0 var(--accent-color);
   font-style: italic;
   margin: 2rem 0;
   font-size: 3.5rem;
@@ -125,7 +125,7 @@ header .container {
 }
 
 .wallet-btn {
-  border-radius: 5rem;
+  border-radius: .1rem;
   margin-left: 2rem;
   border-color: transparent;
 }
@@ -143,7 +143,7 @@ header .container {
   background-color: var(--bg-color);
   border-radius: 5px;
   border: 3px solid var(--accent-color);
-  box-shadow: var(--card-shadow);
+  box-shadow: null;
   padding: 5rem;
   margin-bottom: 2rem;
   opacity: 0;
