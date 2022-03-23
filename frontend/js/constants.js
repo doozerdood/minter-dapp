@@ -1,9 +1,9 @@
 const contractAddress = "0x80d7a96B7A3c057F81f452B7f24873A75fCF094e"; //Replace with your own contract address
 const chain = 'rinkeby'; // rinkeby or polygon
 
-const welcome_h1 = "Welcome to Slow Alien Car Club!";
+const welcome_h1 = "";
 const welcome_h2 = "Connect to MetaMask to Get Started";
-const welcome_p = 'Slow Alien Car Club is a membership program that gives you immediate benefits to MANY luxury car rentals and more! You can find more specific information at the <a href="https://quartermileexotics.com/sacc"  target="_blank" rel="noopener noreferrer"> Quartermile Exotics SACC </a> website.';
+const welcome_p = 'Immediate benefits to MANY luxury car rentals and more! You can find more specific information at the <a href="https://quartermileexotics.com/sacc"  target="_blank" rel="noopener noreferrer"> Quartermile Exotics SACC </a> website.';
 const h1_presale_coming_soon = "Dropping April 4th!";
 const h1_presale_mint = "";
 const h1_public_mint = "SACC has finally launched!";
