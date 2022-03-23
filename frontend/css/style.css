@@ -1,6 +1,6 @@
 /* FONTS */
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"); @import url("https://tiny-naiad-cebacc.netlify.app/css/fonts/stylesheet.css");
+@import url("http://127.0.0.1:5500/frontend/css/fonts/stylesheet.css");
 
 /* GLOBAL STYLES */
 
@@ -13,7 +13,7 @@
   --font-color: #ffffff;
   --btn-bg-color: #232855;
   --accent-color: #a9c762;
-  --header-shadow: var(--accent-color) 0px 0px 5px;
+  --header-shadow: var(--accent-color) 0px 0px 2px;
   --card-shadow: var(--accent-color) 0px 0px 20px;
 }
 
