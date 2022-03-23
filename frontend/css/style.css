@@ -1,13 +1,13 @@
 /* FONTS */
 
-@import url("https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"); @import url("http://127.0.0.1:5500/css/fonts/stylesheet.css");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"); @import url("http://127.0.0.1:5500/css/fonts/stylesheet.css");
 
 /* GLOBAL STYLES */
 
 :root {
-  --font-primary: "lifeform_bb", sans-serif;
-  --font-secondary: "destructobeam_bb", serif;
-  --font-code: "Roboto", monospace;
+  --font-primary: 'lifeform_bb', regular;
+  --font-secondary: 'destructobeam_bb', regular;
+  --font-code: 'Arial', monospace;
   --bg-color: #130525;
   --bg-color-transparent: #130525c0;
   --font-color: #ffffff;
