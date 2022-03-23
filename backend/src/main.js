@@ -136,7 +136,7 @@ const addMetadata = (_dna, _edition) => {
     edition: _edition,
     ...extraMetadata,
     date: dateTime,
-    compiler: "HashLips Art Engine - codeSTACKr Modified",
+    compiler: "DoozerNFT Art Engine - Based On HashLips Art Engine",
   };
   if (network == NETWORK.sol) {
     tempMetadata = {
