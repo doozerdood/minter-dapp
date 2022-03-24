@@ -1,4 +1,4 @@
-const contractAddress = "0x80d7a96B7A3c057F81f452B7f24873A75fCF094e"; //Replace with your own contract address
+const contractAddress = "0x80CF757ED2Aa154A3af485414cb54EeEc81152Cf"; //Replace with your own contract address
 const chain = 'rinkeby'; // rinkeby or polygon
 
 const welcome_h1 = "";
@@ -6,14 +6,14 @@ const welcome_h2 = "Connect to MetaMask to Get Started";
 const welcome_p = 'Immediate benefits to MANY luxury car rentals and more! You can find more specific information at the <a href="https://quartermileexotics.com/sacc"  target="_blank" rel="noopener noreferrer"> Quartermile Exotics SACC </a> website.';
 const h1_presale_coming_soon = "Dropping April 4th!";
 const h1_presale_mint = "";
-const h1_public_mint = "SACC has finally launched!";
+const h1_public_mint = "THE GALACTIC ELITE HAVE ARRIVED";
 const h2_presale_coming_soon = "";
 const h2_presale_mint = "LAUNCHING IN..";
 const p_presale_coming_soon = "The Earth beacon has located the Galactic Elite and is attempting to communicate. Stay tuned for updates!";
 const p_presale_mint_not_whitelisted = "";
 const p_presale_mint_whitelisted = "";
 const p_presale_mint_already_minted = "";
-const p_public_mint = "No whitelist needed. Public minting is now open! 🎉";
+const p_public_mint = "🎉Public minting is now open!🎉";
 const button_presale_coming_soon = "";
 const button_presale_mint_whitelisted = "";
 const button_presale_mint_not_whitelisted = "";
