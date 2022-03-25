@@ -1,3 +1,6 @@
+Rinkeby Contract Address: "0x80CF757ED2Aa154A3af485414cb54EeEc81152Cf"
+Polygon Contract Address: ""
+
 # Minting DAPP
 
 ## Table of Contents
