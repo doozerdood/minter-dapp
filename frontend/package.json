@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/codeSTACKr/nft-landing-page.git"
+    "url": "git+https://github.com/doozerdood/nft-landing-page.git"
   },
   "keywords": [],
-  "author": "Jesse Hall (codeSTACKr)",
+  "author": "Michael Stanley (DoozerNFT)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/codeSTACKr/nft-landing-page/issues"
+    "url": "https://github.com/doozerdood/nft-landing-page/issues"
   },
-  "homepage": "https://github.com/codeSTACKr/nft-landing-page#readme",
+  "homepage": "https://github.com/doozerdood/nft-landing-page",
   "dependencies": {
     "node-fetch": "^2.6.7"
   }
