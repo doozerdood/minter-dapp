@@ -12,6 +12,7 @@
     ]
   },
   "scripts": {
+    "mint": "node utils/nftport/mint.js",
     "build": "node index.js",
     "generate": "node index.js",
     "rarity": "node utils/rarity",
@@ -28,6 +29,7 @@
     "get_contract": "node utils/nftport/retrieveContract",
     "update_public_mint_start_date": "node utils/nftport/updateContract.js -u public_mint_start_date",
     "update_presale_mint_start_date": "node utils/nftport/updateContract.js -u presale_mint_start_date",
+    "update_presale_mint_price": "node utils/nftport/updateContract.js -u presale_mint_price",
     "update_presale_whitelisted_addresses": "node utils/nftport/updateContract.js -u presale_whitelisted_addresses",
     "update_presale_whitelisted_addresses_remove": "node utils/nftport/updateContract.js -u presale_whitelisted_addresses_remove",
     "update_royalty_share": "node utils/nftport/updateContract.js -u royalty_share",

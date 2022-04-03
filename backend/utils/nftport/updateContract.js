@@ -16,6 +16,7 @@
   let {
     CHAIN,
     PUBLIC_MINT_START_DATE,
+    PRESALE_MINT_PRICE,
     PRESALE_MINT_START_DATE,
     CONTRACT_ADDRESS,
     BASE_URI,
@@ -66,6 +67,10 @@
     case "presale_mint_start_date":
       contract.presale_mint_start_date = PRESALE_MINT_START_DATE;
       updateValue = PRESALE_MINT_START_DATE;
+      break;
+    case "presale_mint_price":
+      contract.presale_mint_price = PRESALE_MINT_PRICE;
+      updateValue = PRESALE_MINT_PRICE;
       break;
     case "presale_whitelisted_addresses":
       const addresses_add = PRESALE_WHITELISTED_ADDRESSES.map((address) =>

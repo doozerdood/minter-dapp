@@ -1,4 +1,4 @@
-const contractAddress = "0x26555B30C4B7bdd669cbd3136F238fbe3BAe2482"; //Replace with your own contract address
+const contractAddress = "0x584f3FA793051bf355b939EFc9146d0aCD916031"; //Replace with your own contract address
 const chain = 'rinkeby'; // rinkeby or polygon
 
 const welcome_h1 = "";
@@ -344,6 +344,16 @@ const abi = [
               },
               {
                 internalType: "uint256",
+                name: "presaleMintPrice",
+                type: "uint256",
+              },
+              {
+                internalType: "uint256",
+                name: "presaleMintPrice",
+                type: "uint256",
+              },
+              {
+                internalType: "uint256",
                 name: "tokensPerMint",
                 type: "uint256",
               },
@@ -491,6 +501,11 @@ const abi = [
           {
             internalType: "uint256",
             name: "mintPrice",
+            type: "uint256",
+          },
+          {
+            internalType: "uint256",
+            name: "presaleMintPrice",
             type: "uint256",
           },
           {
