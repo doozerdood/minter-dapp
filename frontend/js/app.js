@@ -288,18 +288,17 @@ function setTotalPrice() {
     mintInput.disabled = true;
     return;
   }
-  const totalPriceWei = BigInt(info.deploymentConfig.mintPrice) * BigInt(mintInputValue);
+  if(!whitelisted) {
+    const totalPriceWei = BigInt(info.deploymentConfig.mintPrice) * BigInt(mintInputValue);
+  } else {
+    const totalPriceWei = BigInt(info.deploymentConfig.presaleMintPrice) * BigInt(mintInputValue);
+  }
   
   let priceType = '';
   if(chain === 'rinkeby') {
     priceType = 'ETH';
   } else if (chain === 'polygon') {
     priceType = 'MATIC';
-  }
-  if(!whitelisted) {
-    price = mintPrice
-  } else {
-    price = presale_mint_price
   }
   const price = web3.utils.fromWei(totalPriceWei.toString(), 'ether');
   totalPrice.innerText = `${price} ${priceType}`;
