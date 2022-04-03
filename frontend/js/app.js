@@ -232,6 +232,11 @@ async function loadInfo() {
   const totalSupply = document.getElementById("totalSupply");
   const mintInput = document.getElementById("mintInput");
   
+  if(!whitelisted) {
+    pricePerMint = mint_price
+  } else {
+    pricePerMint = presale_mint_price
+  }
   pricePerMint.innerText = `${price} ${priceType}`;
   maxPerMint.innerText = `${info.deploymentConfig.tokensPerMint}`;
   totalSupply.innerText = `${info.deploymentConfig.maxSupply}`;
