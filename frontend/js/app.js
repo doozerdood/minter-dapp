@@ -218,7 +218,7 @@ async function loadInfo() {
   setTimeout(() => {
     const countdownCard = document.querySelector('.countdown');
     countdownCard.classList.add('show-card');
-  }, 1000);
+  }, 10000);
 
   let priceType = '';
   if(chain === 'rinkeby') {
@@ -233,9 +233,10 @@ async function loadInfo() {
   const mintInput = document.getElementById("mintInput");
   
   if(!whitelisted) {
-    price = mintPrice
+    price = web3.utils.fromWei(info.deploymentConfig.mintPrice, 'ether');
   } else {
-    price = presale_mint_price
+    price = web3.utils.fromWei(info.deploymentConfig.presale_mint_price, 'ether');
+
   }
   pricePerMint.innerText = `${price} ${priceType}`;
   maxPerMint.innerText = `${info.deploymentConfig.tokensPerMint}`;
