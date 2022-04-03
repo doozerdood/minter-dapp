@@ -15,6 +15,7 @@
   --accent-color: #a9c762;
   --header-shadow: var(--accent-color) 0px 0px 2px;
   --card-shadow: var(--accent-color) 0px 0px 20px;
+  --background-image: "../images/bg/SAAC-Landing-Page-BG.png" ;
 }
 
 * {
@@ -27,7 +28,7 @@ body {
   background-color: var(--bg-color);
   display: flex;
   flex-flow: column;
-  height: 100vh;
+  height: 100%;
   color: var(--font-color);
   font-family: var(--font-primary);
 }
@@ -37,7 +38,7 @@ body {
   flex-direction: column;
   max-width: 960px;
   margin: 0 auto;
-  padding: 1rem 2rem;
+  padding: 0rem 0rem;
   justify-content: center;
   overflow: hidden;
 }
@@ -47,6 +48,8 @@ body {
 header {
   background-color: var(--bg-color);
   box-shadow: var(--header-shadow);
+  margin-bottom:1rem;
+  padding: 0.5em;
 }
 
 header .container {
@@ -125,13 +128,12 @@ header .container {
 }
 
 .wallet-btn {
-  border-radius: .1rem;
-  margin-left: 2rem;
+  border-radius: .2rem;
   border-color: transparent;
 }
 
 .hero-btn {
-  border-radius: 4px;
+  border-radius: 0px;
   font-size: 1.2rem;
   padding: 1.5rem 3rem;
 }
@@ -142,10 +144,10 @@ header .container {
   position: relative;
   background-color: var(--bg-color);
   border-radius: 5px;
-  border: 3px solid var(--accent-color);
+  border: 1px solid var(--accent-color);
   box-shadow: null;
   padding: 5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   opacity: 0;
   transform: translateX(100vw);
   transition: all 0.5s ease-in-out;
@@ -159,7 +161,7 @@ header .container {
 /* COUNTDOWN SECTION */
 
 section {
-  flex: 1 1 auto;
+  flex: 1 0 auto;
 }
 
 #countdown {
@@ -317,7 +319,7 @@ section {
 /* SLIDDER */
 
 .splide {
-  position: absolute;
+  position: fixed;
   top: 90px;
   left: 5rem;
   z-index: -1;
@@ -325,11 +327,11 @@ section {
 
 .splide__slide {
   border: var(--accent-color) solid;
-  border-width: 0px 0px;
+  border-width: 0px 4px 0px 4px;
 }
 
 .splide__slide img {
-  width: 50%;
+  width: 100%;
 }
 
 /* SPINNER */
