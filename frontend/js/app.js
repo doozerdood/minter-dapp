@@ -279,9 +279,9 @@ async function loadInfo() {
 
 function setTotalPrice() {
   if (presaleMintActive) {
-    target = info.deploymentConfig.mintPrice;
+    target = mintPrice;
   } else {
-    target = info.deploymentConfig.presale_mint_price;
+    target = presale_mint_price;
   }
   const mintInput = document.getElementById("mintInput");
   const mintInputValue = parseInt(mintInput.value);
@@ -293,7 +293,7 @@ function setTotalPrice() {
     mintInput.disabled = true;
     return;
   }
-  const totalPriceWei = BigInt(`${target}`) * BigInt(mintInputValue);
+  const totalPriceWei = BigInt(info.deploymentConfig._target) * BigInt(mintInputValue);
   
   let priceType = '';
   if(chain === 'rinkeby') {
