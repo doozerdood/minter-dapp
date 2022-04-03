@@ -237,9 +237,9 @@ async function loadInfo() {
   totalSupply.innerText = `${info.deploymentConfig.maxSupply}`;
   mintInput.setAttribute("max", info.deploymentConfig.tokensPerMint);
   if(!whitelisted) {
-    pricePerMint = mint_price
-  } else {
     pricePerMint = presale_mint_price
+  } else {
+    pricePerMint = mint_price
   }
 
   // MINT INPUT
