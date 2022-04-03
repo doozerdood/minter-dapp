@@ -278,11 +278,6 @@ async function loadInfo() {
 }
 
 function setTotalPrice() {
-  if(!whitelisted) {
-    price = mintPrice
-  } else {
-    price = presale_mint_price
-  }
   const mintInput = document.getElementById("mintInput");
   const mintInputValue = parseInt(mintInput.value);
   const totalPrice = document.getElementById("totalPrice");
