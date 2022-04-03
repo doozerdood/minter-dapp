@@ -218,7 +218,7 @@ async function loadInfo() {
   setTimeout(() => {
     const countdownCard = document.querySelector('.countdown');
     countdownCard.classList.add('show-card');
-  }, 10000);
+  }, 1000);
 
   let priceType = '';
   if(chain === 'rinkeby') {
@@ -233,10 +233,9 @@ async function loadInfo() {
   const mintInput = document.getElementById("mintInput");
   
   if(!whitelisted) {
-    price = web3.utils.fromWei(info.deploymentConfig.mintPrice, 'ether');
+    price = mintPrice
   } else {
-    price = web3.utils.fromWei(info.deploymentConfig.presale_mint_price, 'ether');
-
+    price = presale_mint_price
   }
   pricePerMint.innerText = `${price} ${priceType}`;
   maxPerMint.innerText = `${info.deploymentConfig.tokensPerMint}`;
@@ -289,13 +288,8 @@ function setTotalPrice() {
     mintInput.disabled = true;
     return;
   }
-
-  if (!whitelisted) {
-    totalPriceWei = BigInt(info.deploymentConfig.mintPrice) * BigInt(mintInputValue);
-  } else {
-    totalPriceWei = 'BigInt(info.deploymentConfig.presale_mint_price) * BigInt(mintInputValue)';
-  }
-
+  const totalPriceWei = BigInt(info.deploymentConfig.mintPrice) * BigInt(mintInputValue);
+  
   let priceType = '';
   if(chain === 'rinkeby') {
     priceType = 'ETH';
