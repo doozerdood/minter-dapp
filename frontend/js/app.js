@@ -288,7 +288,7 @@ function setTotalPrice() {
     mintInput.disabled = true;
     return;
   }
-  const totalPriceWei = BigInt(price) * BigInt(mintInputValue);
+  const totalPriceWei = price * BigInt(mintInputValue);
   
   let priceType = '';
   if(chain === 'rinkeby') {
