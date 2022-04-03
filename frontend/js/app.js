@@ -288,14 +288,13 @@ function setTotalPrice() {
     mintInput.disabled = true;
     return;
   }
-  
-  let totalPriceWei = '';
+
   if (!whitelisted) {
-    totalPriceWei = 'BigInt(info.deploymentConfig.mintPrice) * BigInt(mintInputValue)';
+    totalPriceWei = BigInt(info.deploymentConfig.mintPrice) * BigInt(mintInputValue);
   } else {
     totalPriceWei = 'BigInt(info.deploymentConfig.presale_mint_price) * BigInt(mintInputValue)';
   }
-  
+
   let priceType = '';
   if(chain === 'rinkeby') {
     priceType = 'ETH';
