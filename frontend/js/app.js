@@ -198,7 +198,7 @@ async function loadInfo() {
       mainText.innerText = p_presale_mint_already_minted;
       actionButton.innerText = button_presale_already_minted;
     }
-    setTotalPrivatePrice();
+    setTotalPrice();
   } else {
     startTime = window.info.runtimeConfig.presaleMintStart;
     mainHeading.innerText = h1_presale_coming_soon;
@@ -243,103 +243,46 @@ async function loadInfo() {
   mintInput.setAttribute("max", info.deploymentConfig.tokensPerMint);
   
   // MINT INPUT
-  function publicMintPrice () {
-    const mintIncrement = document.getElementById("mintIncrement");
-    const mintDecrement = document.getElementById("mintDecrement");
-    const setQtyMax = document.getElementById("setQtyMax");
-    const min = mintInput.attributes.min.value || false;
-    const max = mintInput.attributes.max.value || false;
-    mintDecrement.onclick = () => {
-      let value = parseInt(mintInput.value) - 1 || 1;
-      if(!min || value >= min) {
-        mintInput.value = value;
-        setTotalPrice()
-      }
-    };
-    mintIncrement.onclick = () => {
-      let value = parseInt(mintInput.value) + 1 || 1;
-      if(!max || value <= max) {
-        mintInput.value = value;
-        setTotalPrice()
-      }
-    };
-    setQtyMax.onclick = () => {
-      mintInput.value = max;
+  const mintIncrement = document.getElementById("mintIncrement");
+  const mintDecrement = document.getElementById("mintDecrement");
+  const setQtyMax = document.getElementById("setQtyMax");
+  const min = mintInput.attributes.min.value || false;
+  const max = mintInput.attributes.max.value || false;
+  mintDecrement.onclick = () => {
+    let value = parseInt(mintInput.value) - 1 || 1;
+    if(!min || value >= min) {
+      mintInput.value = value;
       setTotalPrice()
-    };
-    mintInput.onchange = () => {
+    }
+  };
+  mintIncrement.onclick = () => {
+    let value = parseInt(mintInput.value) + 1 || 1;
+    if(!max || value <= max) {
+      mintInput.value = value;
       setTotalPrice()
-    };
-    mintInput.onkeyup = async (e) => {
-      if (e.keyCode === 13) {
-        mint();
-      }
-    };
-    mintButton.onclick = mint;
-  }
-
-  function privateMintPrice () {
-    const mintIncrement = document.getElementById("mintIncrement");
-    const mintDecrement = document.getElementById("mintDecrement");
-    const setQtyMax = document.getElementById("setQtyMax");
-    const min = mintInput.attributes.min.value || false;
-    const max = mintInput.attributes.max.value || false;
-    mintDecrement.onclick = () => {
-      let value = parseInt(mintInput.value) - 1 || 1;
-      if(!min || value >= min) {
-        mintInput.value = value;
-        setTotalPrivatePrice()
-      }
-    };
-    mintIncrement.onclick = () => {
-      let value = parseInt(mintInput.value) + 1 || 1;
-      if(!max || value <= max) {
-        mintInput.value = value;
-        setTotalPrivatePrice()
-      }
-    };
-    setQtyMax.onclick = () => {
-      mintInput.value = max;
-      setTotalPrivatePrice()
-    };
-    mintInput.onchange = () => {
-      setTotalPrivatePrice()
-    };
-    mintInput.onkeyup = async (e) => {
-      if (e.keyCode === 13) {
-        mint();
-      }
-    };
-    mintButton.onclick = mint;
-  }
-
-  function setTotalPrice() {
-    const mintInput = document.getElementById("mintInput");
-    const mintInputValue = parseInt(mintInput.value);
-    const totalPrice = document.getElementById("totalPrice");
-    const mintButton = document.getElementById("mintButton");
-    if(mintInputValue < 1 || mintInputValue > info.deploymentConfig.tokensPerMint) {
-      totalPrice.innerText = 'INVALID QUANTITY';
-      mintButton.disabled = true;
-      mintInput.disabled = true;
-      return;
     }
-    const totalPriceWei = BigInt(info.deploymentConfig.mintPrice) * BigInt(mintInputValue);
-    
-    let priceType = '';
-    if(chain === 'rinkeby') {
-      priceType = 'ETH';
-    } else if (chain === 'polygon') {
-      priceType = 'MATIC';
+  };
+  setQtyMax.onclick = () => {
+    mintInput.value = max;
+    setTotalPrice()
+  };
+  mintInput.onchange = () => {
+    setTotalPrice()
+  };
+  mintInput.onkeyup = async (e) => {
+    if (e.keyCode === 13) {
+      mint();
     }
-    const price = web3.utils.fromWei(totalPriceWei.toString(), 'ether');
-    totalPrice.innerText = `${price} ${priceType}`;
-    mintButton.disabled = false;
-    mintInput.disabled = false;
-  }
+  };
+  mintButton.onclick = mint;
 }
 
-function setTotalPrivatePrice() {
+function setTotalPrice() {
+  if (presaleMintActive) {
+    target = info.deploymentConfig.mintPrice;
+  } else {
+    target = info.deploymentConfig.presale_mint_price;
+  }
   const mintInput = document.getElementById("mintInput");
   const mintInputValue = parseInt(mintInput.value);
   const totalPrice = document.getElementById("totalPrice");
@@ -350,7 +293,7 @@ function setTotalPrivatePrice() {
     mintInput.disabled = true;
     return;
   }
-  const totalPriceWei = BigInt(info.deploymentConfig.presale_mint_price) * BigInt(mintInputValue);
+  const totalPriceWei = BigInt(_target) * BigInt(mintInputValue);
   
   let priceType = '';
   if(chain === 'rinkeby') {
@@ -362,7 +305,6 @@ function setTotalPrivatePrice() {
   totalPrice.innerText = `${price} ${priceType}`;
   mintButton.disabled = false;
   mintInput.disabled = false;
-}
 }
 
 async function mint() {
