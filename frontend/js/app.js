@@ -288,12 +288,7 @@ function setTotalPrice() {
     mintInput.disabled = true;
     return;
   }
-  if (presaleMintActive) {
-    target = mintPrice;
-  } else {
-    target = presale_mint_price;
-  }
-  const totalPriceWei = BigInt(info.deploymentConfig.target) * BigInt(mintInputValue);
+  const totalPriceWei = BigInt(info.deploymentConfig.mintPrice) * BigInt(mintInputValue);
   
   let priceType = '';
   if(chain === 'rinkeby') {
