@@ -288,12 +288,12 @@ function setTotalPrice() {
     mintInput.disabled = true;
     return;
   }
-
-  let total_price = totalPriceWei;
-  if(!whitelisted) {
-    totalPriceWei = BigInt(info.deploymentConfig.mintPrice) * BigInt(mintInputValue);
+  
+  let totalPriceWei = '';
+  if (!whitelisted) {
+    totalPriceWei = 'BigInt(info.deploymentConfig.mintPrice) * BigInt(mintInputValue)';
   } else {
-    totalPriceWei = BigInt(info.deploymentConfig.presaleMintPrice) * BigInt(mintInputValue);
+    totalPriceWei = 'BigInt(info.deploymentConfig.presale_mint_price) * BigInt(mintInputValue)';
   }
   
   let priceType = '';
