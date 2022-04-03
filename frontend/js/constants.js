@@ -20,6 +20,7 @@ const button_presale_mint_not_whitelisted = "Join The Community";
 const button_presale_already_minted = "Join The Community";
 const button_public_mint = "Mint My Alien!";
 const mint_failed = "Minting failed. 😢 Please try again.";
+const presale_mint_price = "0";
 
 const abi = [
   {

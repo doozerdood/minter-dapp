@@ -192,6 +192,7 @@ async function loadInfo() {
         actionButton.classList.add('hidden');
         mintButton.innerText = button_presale_mint_whitelisted;
         mintContainer.classList.remove('hidden');
+        setTotalPrice = 0;
       }
     } catch(e) {
       // console.log(e);
