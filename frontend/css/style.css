@@ -157,6 +157,10 @@ header .container {
   transform: translateX(0);
 }
 
+.mint-container {
+  font-family: var(--font-secondary);
+}
+
 /* COUNTDOWN SECTION */
 
 section {
