@@ -192,7 +192,6 @@ async function loadInfo() {
         actionButton.classList.add('hidden');
         mintButton.innerText = button_presale_mint_whitelisted;
         mintContainer.classList.remove('hidden');
-        setTotalPrice = presale_mint_price;
       }
     } catch(e) {
       // console.log(e);
@@ -237,7 +236,7 @@ async function loadInfo() {
   maxPerMint.innerText = `${info.deploymentConfig.tokensPerMint}`;
   totalSupply.innerText = `${info.deploymentConfig.maxSupply}`;
   mintInput.setAttribute("max", info.deploymentConfig.tokensPerMint);
-  
+
   // MINT INPUT
   const mintIncrement = document.getElementById("mintIncrement");
   const mintDecrement = document.getElementById("mintDecrement");

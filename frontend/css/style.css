@@ -15,7 +15,6 @@
   --accent-color: #a9c762;
   --header-shadow: var(--accent-color) 0px 0px 2px;
   --card-shadow: var(--accent-color) 0px 0px 20px;
-  --background-image: "../images/bg/SAAC-Landing-Page-BG.png" ;
 }
 
 * {

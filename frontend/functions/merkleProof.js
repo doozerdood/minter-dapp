@@ -7,7 +7,7 @@ exports.handler = async (event, context) => {
   const wallet = event.queryStringParameters && event.queryStringParameters.wallet
   const chain = event.queryStringParameters && event.queryStringParameters.chain
   const contract_address = event.queryStringParameters && event.queryStringParameters.contract
-  const url = 'https://api.nftport.xyz/v0/me/contracts/0x5f8a74177db205c6022a6effe935000d9a7e13c6c33d3c615480d54dfb429b98?';
+  const url = 'https://api.nftport.xyz/v0/me/contracts/collections?';
 
   const options = {
     method: 'GET',

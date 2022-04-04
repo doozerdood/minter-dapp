@@ -16,7 +16,6 @@
   let {
     CHAIN,
     PUBLIC_MINT_START_DATE,
-    PRESALE_MINT_PRICE,
     PRESALE_MINT_START_DATE,
     CONTRACT_ADDRESS,
     BASE_URI,
@@ -35,7 +34,7 @@
   const getWhiteList = async () => {
     // create promise
     return new Promise(async (resolve, reject) => {
-      const url = `https://api.nftport.xyz/v0/me/contracts/0x5f8a74177db205c6022a6effe935000d9a7e13c6c33d3c615480d54dfb429b98?chain=${CHAIN.toLowerCase()}`;
+      const url = `https://api.nftport.xyz/v0/me/contracts/collections?chain=${CHAIN.toLowerCase()}`;
       const options = {
         method: "GET",
         headers: {
@@ -67,10 +66,6 @@
     case "presale_mint_start_date":
       contract.presale_mint_start_date = PRESALE_MINT_START_DATE;
       updateValue = PRESALE_MINT_START_DATE;
-      break;
-    case "presale_mint_price":
-      contract.presale_mint_price = PRESALE_MINT_PRICE;
-      updateValue = PRESALE_MINT_PRICE;
       break;
     case "presale_whitelisted_addresses":
       const addresses_add = PRESALE_WHITELISTED_ADDRESSES.map((address) =>
@@ -166,7 +161,7 @@
     }
 
     try {
-      const url = `https://api.nftport.xyz/v0/contracts`;
+      const url = `https://api.nftport.xyz/v0/contracts/collections`;
       const options = {
         method: "PUT",
         headers: {
