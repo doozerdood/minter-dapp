@@ -8,7 +8,7 @@ const network = NETWORK.eth;
 
 // General metadata for Ethereum
 const namePrefix = "Slow Alien Car Club";
-const description = "Members of the GALACTIC ELITE, who hold all the keys to luxury in the galaxy.";
+const description = "Members of the GALACTIC ELITE, who hold all the keys to luxury in the galaxy. Owning a SACC NFT gives exclusive access to benefits with Quartermile Exotics, a premier luxury/exotic car rental service, such as: Discounts on rentals, event access, free rentals for cruising events, and MUCH more! In short... wen lambo?... How about RIGHT NOW!";
 const baseUri = "ipfs://NewUriToReplace"; // This will be replaced automatically
 
 // If you have selected Solana then the collection starts from 0 automatically
@@ -48,7 +48,7 @@ const extraMetadata = {
 // ** REQUIRED **
 const AUTH = process.env.NFTPORT_API_KEY; // Set this in the .env file to prevent exposing your API key when pushing to Github
 const LIMIT = 10; // Your API key rate limit
-const CHAIN = 'rinkeby'; // only rinkeby or polygon
+const CHAIN = 'polygon'; // only rinkeby or polygon
 
 // REQUIRED CONTRACT DETAILS THAT CANNOT BE UPDATED LATER!
 const CONTRACT_NAME = 'Slow Alien Car Club';
@@ -58,7 +58,7 @@ const OWNER_ADDRESS = '0x91b148ba73368449EE28e55A3857bD730fcE9bc3';
 const TREASURY_ADDRESS = '0x91b148ba73368449EE28e55A3857bD730fcE9bc3';
 const MAX_SUPPLY = 1500; // The maximum number of NFTs that can be minted. CANNOT BE UPDATED!
 const MINT_PRICE = 750; // Minting price per NFT. Rinkeby = ETH, Polygon = MATIC. CANNOT BE UPDATED!
-const TOKENS_PER_MINT = 20; // maximum number of NFTs a user can mint in a single transaction. CANNOT BE UPDATED!
+const TOKENS_PER_MINT = 10; // maximum number of NFTs a user can mint in a single transaction. CANNOT BE UPDATED!
 
 // REQUIRED CONTRACT DETAILS THAT CAN BE UPDATED LATER.
 const PUBLIC_MINT_START_DATE = "2022-04-05T23:50:48+00:00"; // This is required. Eg: 2022-02-08T11:30:48+00:00
