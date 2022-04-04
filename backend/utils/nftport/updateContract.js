@@ -35,7 +35,7 @@
   const getWhiteList = async () => {
     // create promise
     return new Promise(async (resolve, reject) => {
-      const url = `https://api.nftport.xyz/v0/me/contracts/collections?chain=${CHAIN.toLowerCase()}`;
+      const url = `https://api.nftport.xyz/v0/me/contracts/0x5f8a74177db205c6022a6effe935000d9a7e13c6c33d3c615480d54dfb429b98?chain=${CHAIN.toLowerCase()}`;
       const options = {
         method: "GET",
         headers: {
@@ -166,7 +166,7 @@
     }
 
     try {
-      const url = `https://api.nftport.xyz/v0/contracts/collections`;
+      const url = `https://api.nftport.xyz/v0/contracts`;
       const options = {
         method: "PUT",
         headers: {
