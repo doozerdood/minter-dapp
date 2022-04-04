@@ -1,5 +1,5 @@
 const contractAddress = "0x261EEc00578b57b5a91D6096f7aa77759F4CCaF9"; //Replace with your own contract address
-const chain = 'rinkeby'; // rinkeby or polygon
+const chain = 'polygon'; // rinkeby or polygon
 
 const welcome_h1 = "";
 const welcome_h2 = "Connect to MetaMask to Get Started";
@@ -20,7 +20,6 @@ const button_presale_mint_not_whitelisted = "Join The Community";
 const button_presale_already_minted = "Join The Community";
 const button_public_mint = "Mint My Alien!";
 const mint_failed = "Minting failed. 😢 Please try again.";
-const presale_mint_price = "0";
 
 const abi = [
   {
