@@ -7,9 +7,9 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 const network = NETWORK.eth;
 
 // General metadata for Ethereum
-const namePrefix = "Slow Alien Car Club";
+const namePrefix = "SlowAlienCarClub";
 const description = "Members of the GALACTIC ELITE, who hold all the keys to luxury in the galaxy. Owning a SACC NFT gives exclusive access to benefits with Quartermile Exotics, a premier luxury/exotic car rental service, such as: Discounts on rentals, event access, free rentals for cruising events, and MUCH more! In short... wen lambo?... How about RIGHT NOW!";
-const baseUri = "ipfs://bafkreifa3wwkkx4npnlchhy5pahjuelyk6dirspq7obxdikco2d7lek7ja"; // This will be replaced automatically
+const baseUri = "ipfs://bafybeibjkbihlwzr4og3swis76kouabxf3vziiy444ldt7edh3fs3ipjz4/"; // This will be replaced automatically
 
 // If you have selected Solana then the collection starts from 0 automatically
 const layerConfigurations = [
@@ -22,14 +22,14 @@ const layerConfigurations = [
       { name: "Mouth" },
       { name: "Eyes" },
       { name: "Face Accessory" },
-      { name: "Head Gear" },
       { name: "Glasses" },
+      { name: "Head Gear" },
       { name: "Raygun" },
     ],
   },
 ];
 
-const shuffleLayerConfigurations = false;
+const shuffleLayerConfigurations = true;
 
 const debugLogs = false;
 
@@ -51,7 +51,7 @@ const LIMIT = 10; // Your API key rate limit
 const CHAIN = 'rinkeby'; // only rinkeby or polygon
 
 // REQUIRED CONTRACT DETAILS THAT CANNOT BE UPDATED LATER!
-const CONTRACT_NAME = 'Slow Alien Car Club';
+const CONTRACT_NAME = 'SlowAlienCarClub';
 const CONTRACT_SYMBOL = 'SACC';
 const METADATA_UPDATABLE = true; // set to false if you don't want to allow metadata updates after minting
 const OWNER_ADDRESS = '0x91b148ba73368449EE28e55A3857bD730fcE9bc3';
@@ -70,6 +70,7 @@ const ROYALTY_ADDRESS = "0x91b148ba73368449EE28e55A3857bD730fcE9bc3"; // Address
 const BASE_URI = null; // only update if you want to manually set the base uri
 const PREREVEAL_TOKEN_URI = null; // only update if you want to manually set the prereveal token uri
 const PRESALE_WHITELISTED_ADDRESSES = ["0xb3368a88572971766fc2a6658514b6c4A1168d38", "0xe6bBEBdF6caD73F6A5C0226D80Ac107a3Bd7f63f", "0x91b148ba73368449EE28e55A3857bD730fcE9bc3"]; // only update if you want to manually set the whitelisted addresses
+
 // ** OPTIONAL **
 let CONTRACT_ADDRESS = "YOUR CONTRACT ADDRESS"; // If you want to manually include it
 

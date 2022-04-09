@@ -1,10 +1,10 @@
-const contractAddress = "0xc5EF888B58A8638F455Ef345C34DA01dF6b3D6CF"; //Replace with your own contract address
-const chain = 'polygon'; // rinkeby or polygon
+const contractAddress = "0xbEBe1e890db381F537A7b07Ae5fE1C2e5421202a"; //Replace with your own contract address
+const chain = 'rinkeby'; // rinkeby or polygon
 
 const welcome_h1 = "";
 const welcome_h2 = "Connect to MetaMask to Get Started";
 const welcome_p = 'Immediate benefits to MANY luxury car rentals and more! You can find more specific information at the <a href="https://quartermileexotics.com/sacc"  target="_blank" rel="noopener noreferrer"> Quartermile Exotics SACC </a> website.';
-const h1_presale_coming_soon = "Dropping April 4th!";
+const h1_presale_coming_soon = "Dropping April 30th!";
 const h1_presale_mint = "";
 const h1_public_mint = "THE GALACTIC ELITE HAVE ARRIVED";
 const h2_presale_coming_soon = "";
