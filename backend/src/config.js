@@ -69,7 +69,7 @@ const ROYALTY_SHARE = 1000; // Percentage of the token price that goes to the ro
 const ROYALTY_ADDRESS = "0x91b148ba73368449EE28e55A3857bD730fcE9bc3"; // Address that will receive the royalty
 const BASE_URI = "ipfs://bafybeibjkbihlwzr4og3swis76kouabxf3vziiy444ldt7edh3fs3ipjz4/"; 
 const PREREVEAL_TOKEN_URI = null; // only update if you want to manually set the prereveal token uri
-const PRESALE_WHITELISTED_ADDRESSES = ["0xb3368a88572971766fc2a6658514b6c4A1168d38", "0xe6bBEBdF6caD73F6A5C0226D80Ac107a3Bd7f63f", "0x91b148ba73368449EE28e55A3857bD730fcE9bc3"]; // only update if you want to manually set the whitelisted addresses
+const PRESALE_WHITELISTED_ADDRESSES = ["0xb3368a88572971766fc2a6658514b6c4A1168d38", "0x501DF451487C9F2D387bFc416567b133d9F1fc00", "0xe6bBEBdF6caD73F6A5C0226D80Ac107a3Bd7f63f", "0x91b148ba73368449EE28e55A3857bD730fcE9bc3"]; // only update if you want to manually set the whitelisted addresses
 
 // ** OPTIONAL **
 let CONTRACT_ADDRESS = "YOUR CONTRACT ADDRESS"; // If you want to manually include it
@@ -78,7 +78,7 @@ let CONTRACT_ADDRESS = "YOUR CONTRACT ADDRESS"; // If you want to manually inclu
 const GENERIC = false; // Set to true if you want to upload generic metas and reveal the real NFTs in the future
 const GENERIC_TITLE = CONTRACT_NAME; // Replace with what you want the generic titles to say if you want it to be different from the contract name.
 const GENERIC_DESCRIPTION = "What type of GALACTIC ELITE member will you be?"; // Replace with what you want the generic descriptions to say.
-const GENERIC_IMAGE = "https://ipfs.io/ipfs/bafybeibxpucanlqgq6t3vc3gjey4afveo2n2xcg2sdpvnuwlgubaj3yohq"; // Replace with your generic image that will display for all NFTs pre-reveal.
+const GENERIC_IMAGE = null; // Replace with your generic image that will display for all NFTs pre-reveal.
 
 // Automatically set contract address if deployed using the deployContract.js script
 try {
