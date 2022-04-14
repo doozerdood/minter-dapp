@@ -9,7 +9,7 @@ const network = NETWORK.eth;
 // General metadata for Ethereum
 const namePrefix = "SlowAlienCarClub";
 const description = "Members of the GALACTIC ELITE, who hold all the keys to luxury in the galaxy. Owning a SACC NFT gives exclusive access to benefits with Quartermile Exotics, a premier luxury/exotic car rental service, such as: Discounts on rentals, event access, free rentals for cruising events, and MUCH more! In short... wen lambo?... How about RIGHT NOW!";
-const baseUri = "ipfs://bafybeibjkbihlwzr4og3swis76kouabxf3vziiy444ldt7edh3fs3ipjz4/"; // This will be replaced automatically
+const baseUri = "ipfs://NewUriToReplace"; // This will be replaced automatically
 
 // If you have selected Solana then the collection starts from 0 automatically
 const layerConfigurations = [
@@ -29,7 +29,7 @@ const layerConfigurations = [
   },
 ];
 
-const shuffleLayerConfigurations = true;
+const shuffleLayerConfigurations = false;
 
 const debugLogs = false;
 
@@ -57,7 +57,7 @@ const METADATA_UPDATABLE = true; // set to false if you don't want to allow meta
 const OWNER_ADDRESS = '0x91b148ba73368449EE28e55A3857bD730fcE9bc3';
 const TREASURY_ADDRESS = '0x91b148ba73368449EE28e55A3857bD730fcE9bc3';
 const MAX_SUPPLY = 1500; // The maximum number of NFTs that can be minted. CANNOT BE UPDATED!
-const MINT_PRICE = .01; // Minting price per NFT. Rinkeby = ETH, Polygon = MATIC. CANNOT BE UPDATED!
+const MINT_PRICE = 0.01; // Minting price per NFT. Rinkeby = ETH, Polygon = MATIC. CANNOT BE UPDATED!
 const TOKENS_PER_MINT = 10; // maximum number of NFTs a user can mint in a single transaction. CANNOT BE UPDATED!
 
 // REQUIRED CONTRACT DETAILS THAT CAN BE UPDATED LATER.
@@ -67,7 +67,7 @@ const PUBLIC_MINT_START_DATE = "2022-04-30T11:00:48+00:00"; // This is required.
 const PRESALE_MINT_START_DATE = "2022-03-20T11:30:48+00:00"; // Optional. Eg: 2022-02-08T11:30:48+00:00
 const ROYALTY_SHARE = 1000; // Percentage of the token price that goes to the royalty address. 100 bps = 1%
 const ROYALTY_ADDRESS = "0x91b148ba73368449EE28e55A3857bD730fcE9bc3"; // Address that will receive the royalty
-const BASE_URI = "ipfs://bafybeibjkbihlwzr4og3swis76kouabxf3vziiy444ldt7edh3fs3ipjz4/"; 
+const BASE_URI = null; // only update if you want to manually set the base uri
 const PREREVEAL_TOKEN_URI = null; // only update if you want to manually set the prereveal token uri
 const PRESALE_WHITELISTED_ADDRESSES = ["0xb3368a88572971766fc2a6658514b6c4A1168d38", "0x501DF451487C9F2D387bFc416567b133d9F1fc00", "0xe6bBEBdF6caD73F6A5C0226D80Ac107a3Bd7f63f", "0x91b148ba73368449EE28e55A3857bD730fcE9bc3"]; // only update if you want to manually set the whitelisted addresses
 
@@ -77,7 +77,7 @@ let CONTRACT_ADDRESS = "YOUR CONTRACT ADDRESS"; // If you want to manually inclu
 // Generic Metadata is optional if you want to reveal your NFTs
 const GENERIC = false; // Set to true if you want to upload generic metas and reveal the real NFTs in the future
 const GENERIC_TITLE = CONTRACT_NAME; // Replace with what you want the generic titles to say if you want it to be different from the contract name.
-const GENERIC_DESCRIPTION = "What type of GALACTIC ELITE member will you be?"; // Replace with what you want the generic descriptions to say.
+const GENERIC_DESCRIPTION = null; // Replace with what you want the generic descriptions to say.
 const GENERIC_IMAGE = null; // Replace with your generic image that will display for all NFTs pre-reveal.
 
 // Automatically set contract address if deployed using the deployContract.js script
